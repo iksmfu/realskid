@@ -73,15 +73,51 @@
                 transform: translateY(0);
             }
         }
+
+        .loading-image {
+            width: 100px;
+            height: 100px;
+            animation: zoomInOut 2s infinite alternate;
+        }
+
+        @keyframes zoomInOut {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .content {
+            display: none;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
     </style>
 </head>
 <body>
 
-<div class="button-box">
-    <a href="https://iksm.fun/skidded" class="button">Skidded</a>
-    <a href="https://iksm.lol" class="button">Bio Page </a>
-    <a href="https://discord.gg/vFjaXn7Gms" class="button">Support</a>
+<img src="https://cdn.discordapp.com/avatars/1222994933087076392/0f82a0c1e3bdc7c3b03167c3b51333c4.webp?size=96f" alt="Loading..." class="loading-image">
+
+<div class="content">
+    <div class="button-box fade-in">
+        <a href="https://iksm.fun/skidded" class="button">Skidded</a>
+        <a href="https://iksm.lol" class="button">Bio Page </a>
+        <a href="https://discord.gg/vFjaXn7Gms" class="button">Support</a>
+    </div>
 </div>
+
+<script>
+    // Simulate loading time
+    setTimeout(function () {
+        document.querySelector('.loading-image').style.display = 'none';
+        document.querySelector('.content').style.display = 'block';
+    }, 2000); // Adjust the time as needed
+</script>
 
 </body>
 </html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iksm.fun</title>
+    <style>
+        body {
+            user-select: none;
+            background: rgb(25, 25, 25);
+            background: linear-gradient(90deg, rgba(25, 25, 25, 1) 12%, rgba(57, 56, 56, 1) 100%);
+            color: white;
+            font-family: 'proxima-nova', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin-left: -0.50%;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .button-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            animation: fadeInText 3s ease-in-out forwards;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2525256e;
+            color: rgba(255, 255, 255, 0.87);
+            padding: 12px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #1616169f;
+        }
+
+        .button svg {
+            margin-right: 10px;
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="button-box">
+    <a href="https://iksm.fun/skidded" class="button">Skidded</a>
+    <a href="https://iksm.lol" class="button">Bio Page </a>
+    <a href="https://discord.gg/vFjaXn7Gms" class="button">Support</a>
+</div>
+
+</body>
+</html>
